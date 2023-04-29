@@ -1,0 +1,31 @@
+[    
+    {   "id": 1,
+        "name": "Cox's Bazar",
+        "image": "https://example.com/paris.jpg",      
+        "info": "Paris, the capital city of France, is known for its beautiful architecture, world-class museums, and romantic atmosphere."    
+    },    
+    {      
+        "id": 2,      
+        "name": "Tokyo",      
+        "image": "https://example.com/tokyo.jpg",      
+        "info": "Tokyo, the capital city of Japan, is a bustling metropolis known for its cutting-edge technology, vibrant culture, and delicious cuisine."    
+    },    
+    {      
+        "id": 3,      
+        "name": "Rio de Janeiro",      
+        "image": "https://example.com/rio.jpg",      
+        "info": "Rio de Janeiro, Brazil's second-largest city, is famous for its beautiful beaches, lively nightlife, and iconic landmarks like Christ the Redeemer statue."    
+    },    
+    {      
+        "id": 4,      
+        "name": "New York",      
+        "image": "https://example.com/new-york.jpg",      
+        "info": "New York City, often called the 'City That Never Sleeps,' is known for its towering skyscrapers, diverse neighborhoods, and iconic landmarks like the Statue of Liberty."    
+    },    
+    {      
+        "id": 5,      
+        "name": "Sydney",      
+        "image": "https://example.com/sydney.jpg",      
+        "info": "Sydney, Australia's largest city, is famous for its stunning harbor, world-renowned beaches, and vibrant cultural scene."    
+    }
+]

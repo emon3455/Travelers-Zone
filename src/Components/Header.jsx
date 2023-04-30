@@ -1,6 +1,11 @@
+import { useContext } from "react";
 import {Link} from "react-router-dom"
+import { AuthContext } from "../providers/AuthProvider";
 
 const Header = () => {
+
+    const user = useContext(AuthContext)
+
     return (
         <header className="bg-opacity-60 bg-white bg-blend-multiply sticky top-0 z-30">
             <div className="container mx-auto">
@@ -16,7 +21,7 @@ const Header = () => {
                                 </div>
                                 <li className="text-lg font-semibold"><Link to="/">Home</Link></li>
                                 <li className="text-lg font-semibold"><a>Destination</a></li>
-                                <li className="text-lg font-semibold"><a>Contact</a></li>
+                                <li className="text-lg font-semibold"><a>{user ? user.name : "none"}</a></li>
                             </ul>
                         </div>
                         <a className="btn btn-ghost normal-case text-2xl font-bold" >Travelers Zone</a>
@@ -28,7 +33,7 @@ const Header = () => {
                             </div>
                             <li className="text-lg font-semibold"><Link to="/">Home</Link></li>
                             <li className="text-lg font-semibold"><a>Destination</a></li>
-                            <li className="text-lg font-semibold"><a>Contact</a></li>
+                            <li className="text-lg font-semibold"><a>{user ? user.name : "none"}</a></li>
                         </ul>
                     </div>
                     <div className="navbar-end space-x-2">

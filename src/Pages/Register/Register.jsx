@@ -33,6 +33,8 @@ const Register = () => {
                 setError(err.message)
               });
             
+              form.reset();
+            
         })
         .catch(er=>{
             setError(er.message);

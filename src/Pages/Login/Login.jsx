@@ -1,14 +1,16 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-unused-vars */
-import { useContext, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import { sendPasswordResetEmail } from "firebase/auth";
 
 
 const Login = () => {
 
     const [error , setError] = useState("");
-    const {signInUser} = useContext(AuthContext);
+    const {signInUser,resetPass} = useContext(AuthContext);
+    const emailRef = useRef();
 
     const navigate = useNavigate();
     const location = useLocation();
@@ -34,6 +36,22 @@ const Login = () => {
         
     }
 
+    const handleForgetPassword = ()=>{
+        const email = emailRef.current.value;
+        if(!email){
+            alert("Please Enter and Email first");
+            return;
+        }
+        console.log(email,emailRef);
+        resetPass(email)
+        .then(res=>{
+            alert("please check your mail to update password");
+        })
+        .catch(er=>{
+            setError(er.message);
+        })
+    }
+
     return (
         <div>
             <div className="flex justify-center mt-12">
@@ -45,15 +63,15 @@ const Login = () => {
                             <label className="label">
                                 <span className="label-text">Email</span>
                             </label>
-                            <input type="email" placeholder="email" name="email" className="p-2 border-2 rounded-lg w-full" />
+                            <input required type="email" placeholder="email" name="email" ref={emailRef} id="email" className="p-2 border-2 rounded-lg w-full" />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input type="password" name="password" placeholder="password" className="p-2 border-2 rounded-lg w-full" />
+                            <input required type="password"  id="password" name="password" placeholder="password" className="p-2 border-2 rounded-lg w-full" />
                             <label className="label">
-                                <Link href="#" className="text-sky-600">Forgot password?</Link>
+                                <button  onClick={handleForgetPassword} className="link text-sky-600">Forgot password?</button>
                             </label>
                         </div>
 

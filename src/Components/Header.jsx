@@ -1,7 +1,7 @@
 
 const Header = () => {
     return (
-        <header className="bg-opacity-60 bg-white bg-blend-multiply static top-0 z-200">
+        <header className="bg-opacity-60 bg-white bg-blend-multiply sticky top-0 z-30">
             <div className="container mx-auto">
                 <div className="navbar">
                     <div className="navbar-start">

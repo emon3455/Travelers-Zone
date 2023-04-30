@@ -1,20 +1,30 @@
+import { useEffect, useState } from "react";
 import Header from "../../Components/Header";
-
+import Slider from "../../Components/Slider";
 
 const Home = () => {
+
+    const [ destinations , setDestinations] = useState([]);
+
+    useEffect(()=>{
+        fetch("http://localhost:5000/destinations")
+        .then(res=> res.json())
+        .then(data=> setDestinations(data))
+        .catch(er=>{
+            console.log(er.message);
+        })
+    },[])
+
     return (
         <div className="hero min-h-screen" style={{ backgroundImage: `url("https://github.com/emon3455/demo-picture/blob/main/travel-images/box-3.png?raw=true")` }}>
-            <div className="hero-overlay bg-opacity-50 bg-black bg-blend-multiply">
+            <div className="hero-overlay bg-opacity-60 bg-black bg-blend-multiply">
                 <Header></Header>
             </div>
-            <div className="w-screen  flex justify-around ">
+            <div className="flex flex-col justify-center items-center">
 
-                <div className="container mx-auto bg-white text-center">
-                    <h2>helloii</h2>
-                </div>
-
-                <div className="container mx-auto bg-white text-center">
-                    <h2>Hii</h2>
+                <h2 className="text-center text-4xl text-white font-bold mt-16 xl:mt-4  mb-10">Select Your destination and Travel With us!!!</h2>
+                <div className="p-2">
+                    <Slider key={destinations.length} destinations= {destinations}></Slider>
                 </div>
 
             </div>

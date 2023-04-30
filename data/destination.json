@@ -28,5 +28,49 @@
     "name": "Sajek",
     "image": "https://github.com/emon3455/demo-picture/blob/main/travel-images/Sajek.png?raw=true",
     "info": "Sajek Valley is a hill station in Bangladesh, known for its stunning natural beauty, panoramic views of green hills, and indigenous culture. It is a popular tourist destination for its trekking trails, camping sites, and eco-tourism activities. Visitors can explore the valley on foot, and may spot various wildlife such as monkeys, deer, and wild boars. The valley is also home to many indigenous communities, who offer authentic cultural experiences for visitors."
-    }
+    },
+    {
+        "id": 6,
+        "name": "Bandarban",
+        "image": "https://images.unsplash.com/photo-1558673810-9b0b6316d4f4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFuZGFyYmFufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+        "info": "Bandarban is a hilly district located in southeastern Bangladesh, known for its breathtaking natural beauty, indigenous communities, and adventure sports. It is home to the highest peak in Bangladesh, the Keokradong, which is a popular destination for trekking and hiking enthusiasts. Visitors can also explore the natural caves, waterfalls, and hot springs, or learn about the unique culture of the local tribes."
+    },
+    {
+        "id": 7,
+        "name": "Rangamati",
+        "image": "https://images.unsplash.com/photo-1661937320590-f7d82a04d58b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cmFuZ2FtYXRpfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+        "info": "Rangamati is a hilly district located in southeastern Bangladesh, known for its scenic beauty, diverse flora and fauna, and indigenous culture. It is home to the Kaptai Lake, which is the largest man-made lake in Bangladesh and a popular destination for boating and fishing. Visitors can also explore the natural waterfalls, forests, and hills, or learn about the traditional handicrafts and music of the local tribes."
+    },
+    {
+        "id": 8,
+        "name": "Kuakata",
+        "image": "https://images.unsplash.com/photo-1635264647809-66e209bf0bbd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80",
+        "info": "Kuakata is a seaside town located in southwestern Bangladesh, known for its panoramic views of the Bay of Bengal, colorful sunsets, and serene beaches. It is home to the Kuakata Beach, which is one of the few beaches in the world where both sunrise and sunset can be seen from the same spot. Visitors can also explore the nearby Buddhist temples, mosques, and markets, or take a boat ride to the nearby islands."
+    },
+    {
+        "id": 9,
+        "name": "Paharpur",
+        "image": "https://media.istockphoto.com/id/1295763654/photo/joychandi-glass.jpg?b=1&s=170667a&w=0&k=20&c=24t9-9g1SYs6bYt0TRndU1QXa8vOdDSUhfkWC14p7Xg=",
+        "info": "Paharpur is an archaeological site located in northern Bangladesh, known for its ancient ruins of the Pala Empire. It is home to the Paharpur Buddhist Monastery, which is one of the largest and oldest monasteries in South Asia and a UNESCO World Heritage Site. Visitors can explore the various temples, stupas, and courtyards of the monastery, or learn about the history and culture of the region at the adjacent museum."
+    },
+    {
+        "id": 10,
+        "name": "Kishoreganj Nikli",
+        "image": "https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+        "info": "Kishoreganj Nikli is a town in the Kishoreganj district of Bangladesh, known for its traditional pottery industry. Visitors can witness the intricate process of pottery making, from shaping the clay to firing the finished product in a kiln. The town is also home to several historic landmarks, such as the Nikli Palace and the Nikli Bazar, which offer a glimpse into the region's cultural heritage. In addition, the town is surrounded by scenic natural beauty, with nearby attractions such as the Bajitpur Lake and the Jhitka Haor wetlands. Overall, Kishoreganj Nikli offers a unique and authentic cultural experience for tourists interested in learning about traditional pottery making and exploring the region's history and natural beauty."
+    },
+    {        
+        "id": 11,        
+        "name": "Madhabpur Lake",        
+        "image": "https://images.unsplash.com/photo-1596374004290-2d0788efc9b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",        
+        "info": "Madhabpur Lake is a natural lake located in Madhabpur Upazila of Habiganj district, Bangladesh. The lake is surrounded by lush green hills and is a popular destination for boating, fishing, and camping. Visitors can also explore the nearby tea gardens, tribal villages, and the Lawachara National Park, which is home to a wide range of wildlife."    
+    },    
+    {        
+        "id": 12,        
+        "name": "Bagerhat",        
+        "image": "https://images.unsplash.com/photo-1631642386603-5618fa038ad1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80",        
+        "info": "Bagerhat is a district in southwestern Bangladesh, known for its historical and cultural significance. It is home to the Shait Gumbad Mosque, a UNESCO World Heritage Site and one of the most impressive examples of Islamic architecture in South Asia. Visitors can also explore other historical sites, such as the Sixty Dome Mosque and the Tomb of Khan Jahan Ali, or take a boat ride through the nearby mangrove forests of the Sundarbans."    
+    } 
+    
+   
 ]

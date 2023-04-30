@@ -1,9 +1,8 @@
+/* eslint-disable no-unused-vars */
 import { useEffect, useState } from "react";
 import Slider from "../../Components/Slider";
-import { Link } from "react-router-dom";
 
-const Home = () => {
-
+const Destinations = () => {
     const [ destinations , setDestinations] = useState([]);
 
     useEffect(()=>{
@@ -20,12 +19,12 @@ const Home = () => {
             <div className="hero-overlay bg-opacity-60 bg-black bg-blend-multiply"></div>
             <div className="flex flex-col justify-center items-center">
 
-                <h2 className="text-center text-4xl text-white font-bold mt-20  mb-10">Select Your destination and Travel With us!!!</h2>
-                <div className="p-2 my-4">
-                    <Slider key={destinations.length} destinations= {destinations.slice(0,4)}></Slider>
+                <h2 className="text-center text-4xl text-white font-bold mt-20  mb-10">
+                    Visit best Travelling Locations with Best Facilities !!!
+                </h2>
+                <div className="p-2">
+                    <Slider key={destinations.length} destinations= {destinations}></Slider>
                 </div>
-
-                <Link className="btn btn-warning" to="/destinations">See More Locations</Link>
 
             </div>
 
@@ -33,4 +32,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default Destinations;

@@ -29,7 +29,7 @@ const Header = () => {
                                     <input type="text" placeholder="Search Location" className="input input-bordered" />
                                 </div>
                                 <li className="text-lg font-semibold"><Link to="/">Home</Link></li>
-                                <li className="text-lg font-semibold"><a>Destination</a></li>
+                                <li className="text-lg font-semibold"><Link to="/destinations">Destinations</Link></li>
                                 <li className="text-lg font-semibold"><a>Contact</a></li>
                                 
                             </ul>
@@ -42,7 +42,7 @@ const Header = () => {
                                 <input type="text" placeholder="Search Location" className="input input-bordered" />
                             </div>
                             <li className="text-lg font-semibold"><Link to="/">Home</Link></li>
-                            <li className="text-lg font-semibold"><a>Destination</a></li>
+                            <li className="text-lg font-semibold"><Link to="/destinations">Destinations</Link></li>
                             <li className="text-lg font-semibold"><a>Contact</a></li>
                         </ul>
                     </div>

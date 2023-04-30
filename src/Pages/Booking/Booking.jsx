@@ -1,4 +1,3 @@
-import Header from "../../Components/Header";
 import {useLoaderData} from "react-router-dom"
 
 const Booking = () => {
@@ -8,9 +7,7 @@ const Booking = () => {
 
     return (
         <div className="hero min-h-screen" style={{ backgroundImage: `url("https://github.com/emon3455/demo-picture/blob/main/travel-images/box-3.png?raw=true")` }}>
-            <div className="hero-overlay bg-opacity-60 bg-black bg-blend-multiply">
-                <Header></Header>
-            </div>
+            <div className="hero-overlay bg-opacity-60 bg-black bg-blend-multiply"></div>
             <div className="p-2 container mx-auto flex flex-col md:flex-row justify-between gap-10">
 
                 <div className="mt-16 w-full md:w-1/2 md:mt-0">

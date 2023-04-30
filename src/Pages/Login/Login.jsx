@@ -1,13 +1,12 @@
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable no-unused-vars */
 import { Link } from "react-router-dom";
-import Header from "../../Components/Header";
 
 
 const Login = () => {
     return (
         <div>
-            <Header></Header>
-
-            <div className="flex justify-center mt-2">
+            <div className="flex justify-center mt-12">
                 <div className="card w-full max-w-sm shadow-2xl bg-base-100">
                     <div className="card-body">
                         <h2 className="text-3xl font-bold text-center">Login</h2>
@@ -15,15 +14,15 @@ const Login = () => {
                             <label className="label">
                                 <span className="label-text">Email</span>
                             </label>
-                            <input type="text" placeholder="email" className="input input-bordered" />
+                            <input type="text" placeholder="email" className="p-2 border-2 rounded-lg w-full" />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input type="text" placeholder="password" className="input input-bordered" />
+                            <input type="text" placeholder="password" className="p-2 border-2 rounded-lg w-full" />
                             <label className="label">
-                                <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+                                <Link href="#" className="text-sky-600">Forgot password?</Link>
                             </label>
                         </div>
 

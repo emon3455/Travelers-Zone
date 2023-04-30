@@ -7,7 +7,7 @@ const Header = () => {
     const user = useContext(AuthContext)
 
     return (
-        <header className="bg-opacity-60 bg-white bg-blend-multiply sticky top-0 z-30">
+        <header className="bg-opacity-60 bg-white bg-blend-multiply fixed top-0 z-30 w-full">
             <div className="container mx-auto">
                 <div className="navbar">
                     <div className="navbar-start">

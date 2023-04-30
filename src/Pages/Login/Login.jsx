@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-unused-vars */
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 
 
@@ -9,6 +9,10 @@ const Login = () => {
 
     const [error , setError] = useState("");
     const {signInUser} = useContext(AuthContext);
+
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
 
 
     const handleLoginSubmit=(e)=>{
@@ -22,6 +26,7 @@ const Login = () => {
             const logedUser = res.user;
             console.log(logedUser);
             form.reset();
+            navigate(from,{replace: true})
         })
         .catch(er=>{
             setError(er.message);

@@ -2,6 +2,7 @@
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import { updateProfile } from "firebase/auth";
 
 
 const Register = () => {
@@ -20,7 +21,18 @@ const Register = () => {
         createUser(email,password)
         .then(res=>{
             const regUser = res.user;
-            console.log(regUser);
+            //for update user info
+            updateProfile(regUser, {
+                displayName: name,
+                photoURL: photo,
+              })
+              .then(() => {
+                console.log("success");
+              })
+              .catch((err) => {
+                setError(err.message)
+              });
+            
         })
         .catch(er=>{
             setError(er.message);
@@ -38,26 +50,26 @@ const Register = () => {
                         <label className="label">
                             <span className="label-text">Name</span>
                         </label>
-                        <input type="text" name="name" placeholder="name" className="p-2 border-2 rounded-lg w-full" />
+                        <input required type="text" name="name" placeholder="name" className="p-2 border-2 rounded-lg w-full" />
                     </div>
                     <div className="w-full">
                         <label className="label">
                             <span className="label-text">Email</span>
                         </label>
-                        <input type="email" name="email" placeholder="email" className="p-2 border-2 rounded-lg w-full" />
+                        <input required type="email" name="email" placeholder="email" className="p-2 border-2 rounded-lg w-full" />
                     </div>
                     <div className="w-full">
                         <label className="label">
                             <span className="label-text">Password</span>
                         </label>
-                        <input type="password" name="password" placeholder="password" className="p-2 border-2 rounded-lg w-full" />
+                        <input required type="password" name="password" placeholder="password" className="p-2 border-2 rounded-lg w-full" />
                     </div>
 
                     <div className="">
                         <label className="label">
                             <span className="label-text ">photo url</span>
                         </label>
-                        <input type="text" name="photo" placeholder="photo url" className="p-2 border-2 rounded-lg w-full" />
+                        <input required type="text" name="photo" placeholder="photo url" className="p-2 border-2 rounded-lg w-full" />
                     </div>
 
                     <button type="submit" className="mt-2 btn btn-warning font-bold">Register</button>

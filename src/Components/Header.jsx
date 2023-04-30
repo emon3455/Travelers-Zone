@@ -4,7 +4,7 @@ import { AuthContext } from "../providers/AuthProvider";
 
 const Header = () => {
 
-    const user = useContext(AuthContext)
+    const {user} = useContext(AuthContext)
 
     return (
         <header className="bg-opacity-60 bg-white bg-blend-multiply fixed top-0 z-30 w-full">
@@ -21,7 +21,7 @@ const Header = () => {
                                 </div>
                                 <li className="text-lg font-semibold"><Link to="/">Home</Link></li>
                                 <li className="text-lg font-semibold"><a>Destination</a></li>
-                                <li className="text-lg font-semibold"><a>{user ? user.name : "none"}</a></li>
+                                <li className="text-lg font-semibold"><a>Contact</a></li>
                             </ul>
                         </div>
                         <a className="btn btn-ghost normal-case text-2xl font-bold" >Travelers Zone</a>
@@ -33,7 +33,7 @@ const Header = () => {
                             </div>
                             <li className="text-lg font-semibold"><Link to="/">Home</Link></li>
                             <li className="text-lg font-semibold"><a>Destination</a></li>
-                            <li className="text-lg font-semibold"><a>{user ? user.name : "none"}</a></li>
+                            <li className="text-lg font-semibold"><a>Contact</a></li>
                         </ul>
                     </div>
                     <div className="navbar-end space-x-2">
@@ -41,11 +41,11 @@ const Header = () => {
                         <div className="dropdown dropdown-end">
                             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                                 <div className="w-10 rounded-full">
-                                    <img src="https://img.freepik.com/free-icon/user_318-563642.jpg?q=10&h=200" />
+                                    <img src={user ? user.photoURL : "https://img.freepik.com/free-icon/user_318-563642.jpg?q=10&h=200"} />
                                 </div>
                             </label>
                             <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                                <li><a>Logout</a></li>
+                                <li><button>Logout</button></li>
                             </ul>
                         </div>
                         <Link className="btn btn-warning" to="/login">Login</Link>

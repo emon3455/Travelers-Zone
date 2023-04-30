@@ -21,6 +21,7 @@ const Login = () => {
         .then(res=>{
             const logedUser = res.user;
             console.log(logedUser);
+            form.reset();
         })
         .catch(er=>{
             setError(er.message);

@@ -5,6 +5,7 @@ import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import Home from "../Pages/Home/Home";
 import Error from "../Pages/Error/Error";
+import PrivateRoute from "../privateRoutes/PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -18,7 +19,7 @@ const router = createBrowserRouter([
         },
         {
             path: "/booking/:id",
-            element: <Booking></Booking>,
+            element: <PrivateRoute> <Booking></Booking> </PrivateRoute>,
             loader: ({params})=> fetch(`https://travel-server-side-emon3455.vercel.app/destinations/${params.id}`)
         },
         {

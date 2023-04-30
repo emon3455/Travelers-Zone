@@ -47,17 +47,20 @@ const Header = () => {
                     </div>
                     <div className="navbar-end space-x-2">
                         <h4 className="text-xl font-bold">{user && user.displayName}</h4>
-                        <div className="dropdown dropdown-end">
+                        <div className="">
                             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                                 <div className="w-10 rounded-full">
                                     <img src={user ? user.photoURL : "https://img.freepik.com/free-icon/user_318-563642.jpg?q=10&h=200"} />
                                 </div>
                             </label>
-                            <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                                <li><button onClick={handleLogout}>Logout</button></li>
-                            </ul>
                         </div>
-                        <Link className="btn btn-warning" to="/login">Login</Link>
+                        {
+                            user
+                            ?
+                            <button className="btn btn-warning" onClick={handleLogout}>Logout</button>
+                            :
+                            <Link className="btn btn-warning" to="/login">Login</Link>
+                        }
                     </div>
                 </div>
             </div>

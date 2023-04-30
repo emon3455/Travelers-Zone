@@ -1,3 +1,4 @@
+import {Link} from "react-router-dom"
 
 const Header = () => {
     return (
@@ -13,21 +14,21 @@ const Header = () => {
                                 <div className="form-control max-w-full">
                                     <input type="text" placeholder="Search Location" className="input input-bordered" />
                                 </div>
-                                <li><a>News</a></li>
-                                <li><a>Destination</a></li>
-                                <li><a>Contact</a></li>
+                                <li className="text-lg font-semibold"><Link to="/">Home</Link></li>
+                                <li className="text-lg font-semibold"><a>Destination</a></li>
+                                <li className="text-lg font-semibold"><a>Contact</a></li>
                             </ul>
                         </div>
-                        <a className="btn btn-ghost normal-case text-xl">Travelers Zone</a>
+                        <a className="btn btn-ghost normal-case text-2xl font-bold" >Travelers Zone</a>
                     </div>
                     <div className="navbar-center hidden lg:flex">
                         <ul className="menu menu-horizontal px-1">
                             <div className="form-control max-w-full">
                                 <input type="text" placeholder="Search Location" className="input input-bordered" />
                             </div>
-                            <li><a>News</a></li>
-                            <li><a>Destination</a></li>
-                            <li><a>Contact</a></li>
+                            <li className="text-lg font-semibold"><Link to="/">Home</Link></li>
+                            <li className="text-lg font-semibold"><a>Destination</a></li>
+                            <li className="text-lg font-semibold"><a>Contact</a></li>
                         </ul>
                     </div>
                     <div className="navbar-end space-x-2">
@@ -42,7 +43,7 @@ const Header = () => {
                                 <li><a>Logout</a></li>
                             </ul>
                         </div>
-                        <a className="btn btn-warning">Login</a>
+                        <Link className="btn btn-warning" to="/login">Login</Link>
                     </div>
                 </div>
             </div>

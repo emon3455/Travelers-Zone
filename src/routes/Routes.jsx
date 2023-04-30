@@ -17,8 +17,9 @@ const router = createBrowserRouter([
             element: <Home></Home>
         },
         {
-            path: "/booking",
+            path: "/booking/:id",
             element: <Booking></Booking>,
+            loader: ({params})=> fetch(`https://travel-server-side-emon3455.vercel.app/destinations/${params.id}`)
         },
         {
             path: "/login",

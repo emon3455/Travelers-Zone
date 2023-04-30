@@ -7,7 +7,7 @@ const Home = () => {
     const [ destinations , setDestinations] = useState([]);
 
     useEffect(()=>{
-        fetch("http://localhost:5000/destinations")
+        fetch("https://travel-server-side-emon3455.vercel.app/destinations")
         .then(res=> res.json())
         .then(data=> setDestinations(data))
         .catch(er=>{

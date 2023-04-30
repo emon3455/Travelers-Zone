@@ -1,14 +1,19 @@
 /* eslint-disable no-unused-vars */
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import { updateProfile } from "firebase/auth";
+
 
 
 const Register = () => {
 
     const [error , setError] = useState("");
-    const {createUser} = useContext(AuthContext);
+    const {createUser , signInWithGoogle , signInWithFB} = useContext(AuthContext);
+
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
 
     const handleRegisterSubmit = (e)=>{
         e.preventDefault();
@@ -40,6 +45,28 @@ const Register = () => {
             setError(er.message);
         })
 
+    }
+
+    const handleGoogleSignIn = () =>{
+        signInWithGoogle()
+        .then(res=>{
+            const regUser = res.user;
+            navigate(from,{replace: true})
+        })
+        .catch(er=>{
+            setError(er.message);
+        })
+    }
+
+    const handleFBSignIn =()=>{
+        signInWithFB()
+        .then(res=>{
+            const regUser = res.user;
+            navigate(from,{replace: true})
+        })
+        .catch(er=>{
+            setError(er.message);
+        })
     }
 
     return (
@@ -83,11 +110,11 @@ const Register = () => {
                     <p className="text-center font-bold">
                         OR
                     </p>
-                    <div className="w-full flex justify-between btn btn-ghost mb-2 bg-gray-100">
+                    <div onClick={handleGoogleSignIn} className="w-full flex justify-between btn btn-ghost mb-2 bg-gray-100">
                         <img className="h-6 w-6" src="https://github.com/emon3455/demo-picture/blob/main/travel-images/google.png?raw=true" alt="" />
                         <span>Continue with Google</span>
                     </div>
-                    <div className="w-full flex justify-between btn btn-ghost bg-gray-100">
+                    <div onClick={handleFBSignIn} className="w-full flex justify-between btn btn-ghost bg-gray-100">
                         <img className="h-6 w-6" src="https://github.com/emon3455/demo-picture/blob/main/travel-images/fb.png?raw=true" alt="" />
                         <span>Continue with Facebook</span>
                     </div>

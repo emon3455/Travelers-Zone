@@ -9,7 +9,7 @@ import { sendPasswordResetEmail } from "firebase/auth";
 const Login = () => {
 
     const [error , setError] = useState("");
-    const {signInUser,resetPass} = useContext(AuthContext);
+    const {signInUser,resetPass,signInWithGoogle , signInWithFB} = useContext(AuthContext);
     const emailRef = useRef();
 
     const navigate = useNavigate();
@@ -52,6 +52,28 @@ const Login = () => {
         })
     }
 
+    const handleGoogleSignIn = () =>{
+        signInWithGoogle()
+        .then(res=>{
+            const regUser = res.user;
+            navigate(from,{replace: true})
+        })
+        .catch(er=>{
+            setError(er.message);
+        })
+    }
+
+    const handleFBSignIn =()=>{
+        signInWithFB()
+        .then(res=>{
+            const regUser = res.user;
+            navigate(from,{replace: true})
+        })
+        .catch(er=>{
+            setError(er.message);
+        })
+    }
+
     return (
         <div>
             <div className="flex justify-center mt-12">
@@ -84,11 +106,11 @@ const Login = () => {
                             OR
                         </p>
 
-                        <div className="w-full flex justify-between btn btn-ghost mb-2 bg-gray-100">
+                        <div onClick={handleGoogleSignIn} className="w-full flex justify-between btn btn-ghost mb-2 bg-gray-100">
                             <img className="h-6 w-6" src="https://github.com/emon3455/demo-picture/blob/main/travel-images/google.png?raw=true" alt="" />
                             <span>Continue with Google</span>
                         </div>
-                        <div className="w-full flex justify-between btn btn-ghost bg-gray-100">
+                        <div onClick={handleFBSignIn} className="w-full flex justify-between btn btn-ghost bg-gray-100">
                             <img className="h-6 w-6" src="https://github.com/emon3455/demo-picture/blob/main/travel-images/fb.png?raw=true" alt="" />
                             <span>Continue with Facebook</span>
                         </div>

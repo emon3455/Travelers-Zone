@@ -7,6 +7,7 @@ import Home from "../Pages/Home/Home";
 import Error from "../Pages/Error/Error";
 import PrivateRoute from "../privateRoutes/PrivateRoute";
 import Destinations from "../Pages/Destinations/Destinations";
+import Contact from "../Pages/Contact/Contact";
 
 const router = createBrowserRouter([
     {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
         {
             path: "/destinations",
             element: <Destinations></Destinations>,
+        },
+        {
+            path: "/contact",
+            element: <Contact></Contact>
         }
       ]
     }

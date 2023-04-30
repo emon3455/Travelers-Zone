@@ -30,7 +30,7 @@ const Header = () => {
                                 </div>
                                 <li className="text-lg font-semibold"><Link to="/">Home</Link></li>
                                 <li className="text-lg font-semibold"><Link to="/destinations">Destinations</Link></li>
-                                <li className="text-lg font-semibold"><a>Contact</a></li>
+                                <li className="text-lg font-semibold"><Link to="/contact">Contact</Link></li>
                                 
                             </ul>
                         </div>
@@ -43,7 +43,7 @@ const Header = () => {
                             </div>
                             <li className="text-lg font-semibold"><Link to="/">Home</Link></li>
                             <li className="text-lg font-semibold"><Link to="/destinations">Destinations</Link></li>
-                            <li className="text-lg font-semibold"><a>Contact</a></li>
+                            <li className="text-lg font-semibold"><Link to="/contact">Contact</Link></li>
                         </ul>
                     </div>
                     <div className="navbar-end space-x-2">
